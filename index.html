@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>沖纕6天5夜自駕自由行｜悠閒・美食・拍照・購物</title>
+  <meta name="description" content="專業導遊規劃的6天5夜沖纕本島自駕行程，著重悠閒、美食、拍照與購物，路線順暢不折返。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ocean: #0077b6;
+      --ocean-dark: #023e8a;
+      --coral: #ff6b6b;
+      --sand: #fef9ef;
+      --mint: #e8f5e9;
+      --sunset: #ff9f43;
+      --text: #1a1a2e;
+      --muted: #555;
+      --card-shadow: 0 8px 30px rgba(0, 80, 140, 0.12);
+      --radius: 16px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(180deg, #e0f7fa 0%, #fef9ef 30%, #fff 100%);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, var(--ocean-dark) 0%, var(--ocean) 50%, #00b4d8 100%);
+      color: white;
+      padding: 3.5rem 1.5rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 60 Q300 0 600 60 T1200 60 V120 H0Z' fill='%23e0f7fa'/%3E%3C/svg%3E") no-repeat bottom;
+      background-size: cover;
+    }
+
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    header .subtitle {
+      font-size: 1.15rem;
+      opacity: 0.95;
+      margin-bottom: 1.5rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: center;
+    }
+
+    .tag {
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(8px);
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    /* Main */
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    /* Overview cards */
+    .overview {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+
+    .overview-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--card-shadow);
+      text-align: center;
+      transition: transform 0.25s ease;
+    }
+
+    .overview-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .overview-card .icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .overview-card h3 {
+      font-size: 1rem;
+      color: var(--ocean-dark);
+      margin-bottom: 0.3rem;
+    }
+
+    .overview-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* Section titles */
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--ocean-dark);
+      margin: 2.5rem 0 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .section-title::before {
+      content: '';
+      width: 6px;
+      height: 1.6rem;
+      background: var(--coral);
+      border-radius: 3px;
+    }
+
+    /* Day cards */
+    .day-card {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--card-shadow);
+      margin-bottom: 1.75rem;
+      overflow: hidden;
+      border-left: 6px solid var(--ocean);
+    }
+
+    .day-card:nth-child(even) {
+      border-left-color: var(--sunset);
+    }
+
+    .day-header {
+      background: linear-gradient(90deg, #f0f9ff, #fff);
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      border-bottom: 1px solid #e8f0fe;
+    }
+
+    .day-badge {
+      background: var(--ocean);
+      color: white;
+      font-weight: 700;
+      padding: 0.35rem 0.9rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+    }
+
+    .day-card:nth-child(even) .day-badge {
+      background: var(--sunset);
+    }
+
+    .day-area {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--ocean-dark);
+    }
+
+    .day-body {
+      padding: 1.5rem;
+    }
+
+    .day-section {
+      margin-bottom: 1.25rem;
+    }
+
+    .day-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .day-section h4 {
+      font-size: 0.95rem;
+      color: var(--ocean);
+      margin-bottom: 0.4rem;
+      font-weight: 700;
+    }
+
+    .day-section p, .day-section li {
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .day-section ul {
+      padding-left: 1.2rem;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px dashed #d0e8f5;
+    }
+
+    .meta-item {
+      background: var(--mint);
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      font-size: 0.88rem;
+    }
+
+    .meta-item strong {
+      display: block;
+      color: var(--ocean-dark);
+      font-size: 0.8rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .map-keyword {
+      background: #fff3e0;
+      color: #e65100;
+      padding: 0.15rem 0.5rem;
+      border-radius: 6px;
+      font-family: monospace;
+      font-size: 0.85rem;
+      display: inline-block;
+      margin: 0.15rem 0.2rem 0.15rem 0;
+    }
+
+    /* Tips section */
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .tip-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--card-shadow);
+    }
+
+    .tip-card h3 {
+      font-size: 1.1rem;
+      color: var(--ocean-dark);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .tip-card ul {
+      padding-left: 1.2rem;
+      font-size: 0.93rem;
+    }
+
+    .tip-card li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* Accommodation */
+    .accommodation {
+      background: linear-gradient(135deg, #fff8e1, #fff);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--card-shadow);
+      margin-bottom: 2rem;
+      border: 1px solid #ffe0b2;
+    }
+
+    .accommodation h3 {
+      color: var(--sunset);
+      margin-bottom: 0.75rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid #e0e0e0;
+      margin-top: 2rem;
+    }
+
+    /* Sticky nav */
+    .day-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+      position: sticky;
+      top: 0;
+      background: rgba(224, 247, 250, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 0.75rem;
+      z-index: 100;
+      border-radius: 12px;
+    }
+
+    .day-nav a {
+      text-decoration: none;
+      background: white;
+      color: var(--ocean-dark);
+      padding: 0.4rem 0.9rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: all 0.2s;
+    }
+
+    .day-nav a:hover {
+      background: var(--ocean);
+      color: white;
+    }
+
+    /* Print friendly */
+    @media print {
+      header { padding: 1.5rem; }
+      .day-nav { display: none; }
+      .day-card { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
+    }
+
+    @media (max-width: 600px) {
+      .day-header { flex-direction: column; align-items: flex-start; }
+      .meta-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>沖纕 6天5夜 自駕自由行</h1>
+      <p class="subtitle">悠閒・美食・拍照・購物｜專業導遊規劃</p>
+      <div class="tags">
+        <span class="tag">🚗 自駕</span>
+        <span class="tag">🍽️ 美食</span>
+        <span class="tag">📸 拍照</span>
+        <span class="tag">🛍️ 購物</span>
+        <span class="tag">6-7人成人團體</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Overview -->
+    <div class="overview">
+      <div class="overview-card">
+        <div class="icon">📍</div>
+        <h3>路線原則</h3>
+        <p>南 → 中部 → 北部<br>順暢不折返</p>
+      </div>
+      <div class="overview-card">
+        <div class="icon">🏨</div>
+        <h3>住宿建議</h3>
+        <p>中部2-3晚 + 北部1-2晚<br>最後1晚那霸方便離境</p>
+      </div>
+      <div class="overview-card">
+        <div class="icon">⏱️</div>
+        <h3>每日節奏</h3>
+        <p>車程大多1小時內<br>留足拍照與用餐時間</p>
+      </div>
+      <div class="overview-card">
+        <div class="icon">🚗</div>
+        <h3>租車提醒</h3>
+        <p>那霸機場取還車<br>建議2輛或7人座</p>
+      </div>
+    </div>
+
+    <!-- Day navigation -->
+    <nav class="day-nav">
+      <a href="#day1">Day 1 那霸</a>
+      <a href="#day2">Day 2 美濱</a>
+      <a href="#day3">Day 3 恩納</a>
+      <a href="#day4">Day 4 古宇利</a>
+      <a href="#day5">Day 5 名護</a>
+      <a href="#day6">Day 6 離境</a>
+    </nav>
+
+    <!-- Day 1 -->
+    <article class="day-card" id="day1">
+      <div class="day-header">
+        <span class="day-badge">Day 1</span>
+        <span class="day-area">南部・那霸 Naha</span>
+      </div>
+      <div class="day-body">
+        <div class="day-section">
+          <h4>行程重點</h4>
+          <p>下午抵達那霸機場 → 取租車 → 入住國際通（Kokusai Dori）逛街購物、街頭美食（Taco Rice、沖纕麵、冰淇淋、伴手禮）、第一牧志公設市場海鮮與小吃。晚上悠閒散步拍照。</p>
+        </div>
+        <div class="meta-grid">
+          <div class="meta-item">
+            <strong>建議停留</strong>
+            下午～晚上（自由安排）
+          </div>
+          <div class="meta-item">
+            <strong>交通</strong>
+            機場 → 市區約 10-20 分鐘
+          </div>
+          <div class="meta-item">
+            <strong>Google Maps 關鍵字</strong>
+            <span class="map-keyword">国際通り Kokusai Dori Naha</span>
+            <span class="map-keyword">第一牧志公設市場</span>
+          </div>
+          <div class="meta-item">
+            <strong>住宿建議</strong>
+            那霸市區（國際通附近）
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Day 2 -->
+    <article class="day-card" id="day2">
+      <div class="day-header">
+        <span class="day-badge">Day 2</span>
+        <span class="day-area">南 → 中部・北谷美濱 American Village</span>
+      </div>
+      <div class="day-body">
+        <div class="day-section">
+          <h4>行程重點</h4>
+          <p>早上那霸補購或輕鬆拍首里城（選做）→ 下午驅車至美濱美國村：彩色美式建築拍照、Depot Island 購物、海邊 Sunset Beach 散步、吃 Taco Rice / Blue Seal 冰淇淋，晚上欣賞燈光。</p>
+        </div>
+        <div class="meta-grid">
+          <div class="meta-item">
+            <strong>建議停留</strong>
+            美濱美國村 半天～整天
+          </div>
+          <div class="meta-item">
+            <strong>交通</strong>
+            那霸 → 北谷約 35-50 分鐘
+          </div>
+          <div class="meta-item">
+            <strong>Google Maps 關鍵字</strong>
+            <span class="map-keyword">Mihama American Village Chatan</span>
+            <span class="map-keyword">Depot Island</span>
+          </div>
+          <div class="meta-item">
+            <strong>住宿建議</strong>
+            北谷／美國村附近（中部基地）
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Day 3 -->
+    <article class="day-card" id="day3">
+      <div class="day-header">
+        <span class="day-badge">Day 3</span>
+        <span class="day-area">中部・北谷／恩納</span>
+      </div>
+      <div class="day-body">
+        <div class="day-section">
+          <h4>行程重點</h4>
+          <p>全天中部悠閒：美國村繼續購物或周邊海灘拍照 → 萬座毛（Cape Manzamo）懸崖象鼻岩絕美拍照（日落尤佳）→ 附近恩納咖啡廳或海景餐廳用餐。</p>
+        </div>
+        <div class="meta-grid">
+          <div class="meta-item">
+            <strong>建議停留</strong>
+            萬座毛約 45-90 分鐘
+          </div>
+          <div class="meta-item">
+            <strong>交通</strong>
+            北谷 → 萬座毛約 30-40 分鐘
+          </div>
+          <div class="meta-item">
+            <strong>Google Maps 關鍵字</strong>
+            <span class="map-keyword">万座毛 Cape Manzamo Onna</span>
+            <span class="map-keyword">恩納村海灘</span>
+          </div>
+          <div class="meta-item">
+            <strong>住宿建議</strong>
+            北谷／恩納／讀谷區域
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Day 4 -->
+    <article class="day-card" id="day4">
+      <div class="day-header">
+        <span class="day-badge">Day 4</span>
+        <span class="day-area">中部 → 北部・古宇利島／名護</span>
+      </div>
+      <div class="day-body">
+        <div class="day-section">
+          <h4>行程重點</h4>
+          <p>早上出發北部：古宇利島（心形岩、橋上拍照、古宇利海洋塔）→ 名護鳳梨園（Nago Pineapple Park：鳳梨園、甜點試吃、購物）。下午悠閒海邊或公園。</p>
+        </div>
+        <div class="meta-grid">
+          <div class="meta-item">
+            <strong>建議停留</strong>
+            古宇利島 2-3 小時／鳳梨園 1-2 小時
+          </div>
+          <div class="meta-item">
+            <strong>交通</strong>
+            中部 → 古宇利約 50-70 分鐘
+          </div>
+          <div class="meta-item">
+            <strong>Google Maps 關鍵字</strong>
+            <span class="map-keyword">古宇利島 Kouri Island</span>
+            <span class="map-keyword">名護パイナップルパーク</span>
+          </div>
+          <div class="meta-item">
+            <strong>住宿建議</strong>
+            名護附近（或回中部）
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Day 5 -->
+    <article class="day-card" id="day5">
+      <div class="day-header">
+        <span class="day-badge">Day 5</span>
+        <span class="day-area">北部 + 南下</span>
+      </div>
+      <div class="day-body">
+        <div class="day-section">
+          <h4>行程重點</h4>
+          <p>北部補充拍照／美食（名護周邊海景或市場）→ 下午南下中部購物休息，或往南部輕鬆文化景點 → 晚上那霸美食。</p>
+        </div>
+        <div class="meta-grid">
+          <div class="meta-item">
+            <strong>建議停留</strong>
+            依體力彈性安排
+          </div>
+          <div class="meta-item">
+            <strong>交通</strong>
+            名護 → 中部／南約 1-1.5 小時
+          </div>
+          <div class="meta-item">
+            <strong>Google Maps 關鍵字</strong>
+            <span class="map-keyword">名護市</span>
+            <span class="map-keyword">American Village</span>
+            <span class="map-keyword">国際通り</span>
+          </div>
+          <div class="meta-item">
+            <strong>住宿建議</strong>
+            那霸（方便隔天離境）
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Day 6 -->
+    <article class="day-card" id="day6">
+      <div class="day-header">
+        <span class="day-badge">Day 6</span>
+        <span class="day-area">南部・離境</span>
+      </div>
+      <div class="day-body">
+        <div class="day-section">
+          <h4>行程重點</h4>
+          <p>早上那霸最後購物或早餐 → 還車 → 機場。</p>
+        </div>
+        <div class="meta-grid">
+          <div class="meta-item">
+            <strong>建議停留</strong>
+            視航班時間
+          </div>
+          <div class="meta-item">
+            <strong>交通</strong>
+            市區 → 機場約 10-20 分鐘
+          </div>
+          <div class="meta-item">
+            <strong>提醒</strong>
+            預留還車與安檢時間
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Food / Photo / Shopping -->
+    <h2 class="section-title">美食・拍照・購物重點</h2>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <h3>🍽️ 美食推薦</h3>
+        <ul>
+          <li><strong>Taco Rice</strong>：美國村 Kijimuna 或 King Tacos 系列</li>
+          <li><strong>海鮮／沖纕麵</strong>：第一牧志市場或國際通周邊</li>
+          <li><strong>甜點</strong>：Blue Seal 冰淇淋、鳳梨相關甜點</li>
+          <li>團體建議找大桌或海景餐廳，出發前用 Google Maps 確認營業時間</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <h3>📸 拍照亮點</h3>
+        <ul>
+          <li>美濱美國村彩色建築與日落燈光</li>
+          <li>萬座毛懸崖象鼻岩海景</li>
+          <li>古宇利大橋與心形岩</li>
+          <li>那霸國際通街頭氛圍</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <h3>🛍️ 購物推薦</h3>
+        <ul>
+          <li><strong>國際通</strong>：伴手禮、泡盛、工藝品</li>
+          <li><strong>美國村</strong>：美式風格服飾與紀念品</li>
+          <li><strong>鳳梨園</strong>：鳳梨產品與甜點</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Accommodation note -->
+    <div class="accommodation">
+      <h3>🏨 住宿安排建議</h3>
+      <p>為減少折返與疲勞，建議：</p>
+      <ul style="padding-left:1.2rem; margin-top:0.5rem;">
+        <li><strong>中部（北谷／恩納／讀谷）</strong>：2-3 晚（購物與美食方便）</li>
+        <li><strong>北部（名護附近）</strong>：1-2 晚</li>
+        <li><strong>那霸</strong>：最後 1 晚（離境方便）</li>
+      </ul>
+      <p style="margin-top:0.75rem; font-size:0.9rem; color:#666;">中部如美國村周邊有多間適合團體的連通房或度假村。</p>
+    </div>
+
+    <!-- Notes -->
+    <h2 class="section-title">重要提醒</h2>
+    <div class="tip-card" style="margin-bottom:2rem;">
+      <ul>
+        <li>6-7 人建議租 <strong>2 輛車</strong> 或一輛 7 人座，行李與舒適度較佳。</li>
+        <li>沖纕天氣炎熱，請多補充水分並做好防曬。</li>
+        <li>主要景點與商場（美國村、國際通、萬座毛、鳳梨園等）大多全年營業，但餐廳可能有固定公休，出發前請用 Google Maps 確認「今日營業」。</li>
+        <li>本行程以悠閒為主，可依當天體力與天氣彈性調整。</li>
+        <li>租車需持有效國際駕照。</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>沖纕 6天5夜 自駕自由行行程｜著重悠閒・美食・拍照・購物</p>
+    <p style="margin-top:0.4rem; font-size:0.85rem;">路線順暢不折返・適合 6-7 人成人團體　｜　出發前請再次確認營業時間與路況</p>
+  </footer>
+</body>
+</html>
